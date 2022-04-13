@@ -1,0 +1,97 @@
+Array Oluşturma
+var listem=["Ali","Ayşe","Ahmet","Necla","Yahya"];
+var listem2=[25,34,23,27,40];
+var listem3=[5,4,3,7,0];
+
+Array Yazırma
+console.log(listem);
+alert(listem2);
+
+Arrayın Uzunuğu
+console.log(listem.length);
+if (listem.length==listem2.length){alert("İki arrayin eleman sayısı eşittir");
+}else{alert("İki arrayin eleman sayısı eşit değildir.");}
+for (var i=0 ; i<listem.length;i++){
+ console.log(listem[i]) }
+
+-Arrayin sonuna eleman ekleme,Arrayın son elemanını silme
+console.log(listem);
+listem.push("Mehmet");
+console.log(listem);
+console.log("---------------------------------");
+console.log(listem2);
+listem2.pop();
+console.log(listem2);
+
+İlk elemanı silme ve başa eleman ekleme
+console.log(listem);
+listem.shift();
+console.log(listem);
+console.log("---------------------------------");
+console.log(listem);
+listem.unshift("Hasan");
+console.log(listem);
+
+Arrayın belli indexleri arasındaki elemanarı getirme ve silme
+console.log(listem);
+console.log(listem.slice(1,2));
+console.log(listem);
+listem.splice(2,2);
+console.log(listem);
+
+Arrayde bir elemanın olup olmadığını kontrol
+console.log(listem);
+if(listem.includes("Pınar")) {alert(" Burda..")}
+else{alert(" burda böyle biri yok..")}
+
+Arrayi Sıralama
+console.log(listem);
+console.log(listem.sort());
+
+İki arrayi birleştirme
+console.log(listem2);
+console.log(listem3);
+console.log(listem2.concat(listem3));
+console.log(listem);
+var lstStrng =listem.toString() ;
+console.log(lstStrng);
+
+SORULAR:
+1-Kullanıcıdan sayı girmesini isteyelim. Kullanıcı 0 girdiğinde sayı girişi dursun. Girilen sayıları listeye atan
+ve ortalamasını bulup ekrana yazdıran programını yapalım.
+var listem=[];
+var sayi=1;
+kullanıcıya sayıları giriş yaptıralm.
+while (sayi!=0){
+ sayi=parseInt(prompt("Ortalaması alınacak sayıları girnz"));
+ listem.push(sayi);}
+var toplam=0;
+for (var i=0; i<listem.length; i++){
+ toplam+=listem[i];
+}
+listem.pop();
+console.log(toplam);
+console.log(listem);
+alert("Ortalama= " + (toplamlistem.length));
+
+2- Soru : verilen arraydeki isimlerden icinde ‘a’ harfi bulunanlari silen bir program yaziniz
+INPUT : list1=["Ali,Veli,Ayse,Fatma,Omer]
+OUTPUT : [Veli,Omer]
+var list1=["Ali","Veli","Ayse", "Selim","Fatma","Omer"]; array[i].includes("a")
+for(var i=0 ; i<list1.length ; i++){
+ var isim=list1[i];
+ isim=isim.toLowerCase();
+ if(isim.includes("a")){
+ list1.splice(i,1);}}
+console.log(list1);
+
+3- Ürünlerin isimlerini ve fiyatlarını ayrı arraylerde yazalım. Kullanıcının girdiği fiyattan ucuz ürünleri yazdıralım.
+var urun=["Gomlek","Kazak","Etek","Pantalon","Ayakkabı","Çanta"];
+var fiyat=[70,100,150,200,250,300];
+var filtre=parseInt(prompt("Listenecek ürünlerin üst limitini giriniz.."));
+var fiyat2=0;
+console.log("Alabileceğiniz Ürünler");
+console.log("-----------------------");
+for(var i=0; i<fiyat.length;i++){
+if(fiyat[i]<=filtre){
+ console.log(urun[i] +" = " +fiyat[i]);}}
