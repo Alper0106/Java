@@ -1,2 +1,3 @@
 merhaba dunya
 intelijj ile commit yapiyorum
+remot master
